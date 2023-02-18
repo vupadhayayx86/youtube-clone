@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 import {demoProfilePicture} from "../utils/constants"
 import { borderRadius } from '@mui/system'
 
-const ChannelCard = ({channelDetail}) => {
+const ChannelCard = ({channelDetail,marginTop}) => {
   return (
     <Box sx={{
       boxShadow:'none',
@@ -15,7 +15,8 @@ const ChannelCard = ({channelDetail}) => {
       alignItems:'center',
       width:{xs:'356px', md:'300px'},
       height:'326px',
-      margin:'auto'
+      marginTop:marginTop,
+     
     }}>
       <Link to={`/channel/${channelDetail?.id?.channelId}`}>
       <CardContent sx={{display:'flex', flexDirection:'column',justifyContent:'center',textAlign:'center', color:'#fff'}}>
